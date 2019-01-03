@@ -1,3 +1,25 @@
-<p>
-  home works!
-</p>
+<ul *ngFor= "let present of presents | async">
+    <li>
+      <p> {{ present.giver }} </p>
+    </li>
+    <li>
+        <p> {{ present.receiver }} </p>
+    </li>
+    <li>
+        <p> {{ present.picture }} </p>
+    </li>
+    <li>
+        <p> {{ present.name }} </p>
+    </li>
+    <li>
+        <p> {{ present.name }} </p>
+    </li>
+    <li>
+        <p> {{ present.date }} </p>
+    </li>
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-primary">
+        <input type="checkbox" autocomplete="off" (click)="Thanks()"> Send Thanking Letter
+      </label>
+    </div>
+  </ul>

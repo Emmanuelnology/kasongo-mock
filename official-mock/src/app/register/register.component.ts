@@ -10,6 +10,12 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
 
   constructor(private router: Router, private auth: AuthService) { }
+  register(details: {email: string, password: string}) {
+    this.auth.register(details.email, details.password)
+      .then (() => {
+        this.router.navigate(['/']);
+      });
+    }
 
   ngOnInit() {
   }
