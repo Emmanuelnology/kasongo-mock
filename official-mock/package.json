@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "scan": "sonar-scanner.bat -D\"sonar.coverage.exclusions=**/*\" -D\"sonar.projectKey=ca-kasongo\" -D\"sonar.organization=nology\" -D\"sonar.sources=src\" -D\"sonar.host.url=https://sonarcloud.io\" -D\"sonar.login=c98cecd31dddf973ab8047077e59303f3b04f94d\""
   },
   "private": true,
   "dependencies": {
