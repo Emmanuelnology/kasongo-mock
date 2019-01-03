@@ -2,7 +2,7 @@
     background-image: url('../christmas.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
 }
 
 h1 {

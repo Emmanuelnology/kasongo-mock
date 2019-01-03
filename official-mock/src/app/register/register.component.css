@@ -2,13 +2,22 @@
     background-image: url('../christmas.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
 }
 
 h1 {
     text-align: center;
     color: rgb(85, 23, 23);
     text-decoration: underline;
+}
+
+img {
+    height: 150px;
+    width: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
 }
 
 label {
