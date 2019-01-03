@@ -16,6 +16,21 @@ export class CreatePresentComponent implements OnInit {
     this.presents= this.presentService.presents;
    }
 
+  //  add(bookTitle: HTMLInputElement) {
+  //   if (bookTitle.value) {
+  //     const book: IBook = {
+  //       name: bookTitle.value,
+  //       isRead: false,
+  //     };
+  //     this.addButtonDisabled = true;
+      
+  //     this.bookService.add(book).then(
+  //       () => {
+  //         bookTitle.value='';
+  //         this.addButtonDisabled = false;
+  //       }
+  //     );
+  //   } }
   //  add(presentTitle: HTMLInputElement) {
   //   if (presentTitle.value) {
   //     this.presentService.addPresent(presentTitle.value);
