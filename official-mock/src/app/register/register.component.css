@@ -20,7 +20,11 @@ img {
     margin-top: 2em;
 }
 
+.border {
+    background-color: rgb(55, 114, 55);
+}
+
 label {
-    color: rgb(139, 85, 85);
-    font-weight: bold;
+    color: rgb(78, 36, 36);
+    font-weight: bold; 
 }

@@ -11,7 +11,11 @@ h1 {
     text-decoration: underline;
 }
 
+.border {
+    background-color: rgb(55, 114, 55);
+}
+
 label {
-    color: rgb(139, 85, 85);
+    color: rgb(78, 36, 36);
     font-weight: bold; 
 }
