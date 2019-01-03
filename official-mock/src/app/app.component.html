@@ -7,9 +7,9 @@
 </div>
 <h2>Here are some links to help you start: </h2>
 <ul>
-  <ul>
-    <li class="text" *ngFor="let item of items | async">
-      {{item.name}}
-    </li>
-  </ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{item.name}}
+  </li>
+</ul>
+<router-outlet></router-outlet>
 
