@@ -15,12 +15,12 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 
-// import { AuthGuard } from './services/auth-guard.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const appRoutes: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
-  { path: "", component: HomeComponent }
+  { path: "", component: HomeComponent, canActivate: [AuthGuardService] }
 ];
 
 @NgModule({
@@ -42,7 +42,7 @@ const appRoutes: Routes = [
     ),
     FormsModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

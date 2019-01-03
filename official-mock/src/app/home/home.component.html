@@ -1,3 +1,4 @@
+<h1>Welcome {{ authService.famuser?.email }} to your gift collection app</h1>
 <ul *ngFor= "let present of presents | async">
     <li>
       <p> {{ present.giver }} </p>
@@ -23,3 +24,4 @@
       </label>
     </div>
   </ul>
+<button (click)="logout()" class="btn btn-danger">Log Out</button>
