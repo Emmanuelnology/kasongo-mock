@@ -7,8 +7,10 @@
 
 h1 {
     text-align: center;
-    color: rgb(85, 23, 23);
+    color: rgb(65, 13, 13);
     text-decoration: underline;
+    font-style: italic;
+    font-size: 3.5em;
 }
 
 img {
@@ -25,6 +27,6 @@ img {
 }
 
 label {
-    color: rgb(78, 36, 36);
+    color: rgb(63, 14, 14);
     font-weight: bold; 
 }

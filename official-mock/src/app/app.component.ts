@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'official-mock';
-  items: Observable<any[]>;
+  presents: Observable<any[]>;
   constructor(afs: AngularFirestore) {
-    this.items = afs.collection('items').valueChanges();
+    this.presents = afs.collection('presents').valueChanges();
   }
 }
