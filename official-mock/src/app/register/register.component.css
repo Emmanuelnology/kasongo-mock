@@ -1,0 +1,17 @@
+.all-register {
+    background-image: url('../christmas.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(85, 23, 23);
+    text-decoration: underline;
+}
+
+label {
+    color: rgb(139, 85, 85);
+    font-weight: bold;
+}

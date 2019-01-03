@@ -1,21 +1,24 @@
-<form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+<div class="all-register">
+  <h1>Register</h1>
+  <form class="form-signin text-center p-5" #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
+  <div class="mt-4 mb-3">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail">Email:</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword">Password:</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    <div class="form-group">
+      <label for="usr">Name:</label>
+      <input type="text" class="form-control" id="usr">
+      <label for="usr">Firstname:</label>
+      <input type="text" class="form-control" id="usr">
     </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+</div>
