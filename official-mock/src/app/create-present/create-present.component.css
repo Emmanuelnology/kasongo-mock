@@ -1,0 +1,14 @@
+.all-create {
+    background-image: url('../christmas.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(136, 9, 9);
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 3.5em;
+}

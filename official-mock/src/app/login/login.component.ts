@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   signin(infos: {email: string, password: string}) {
     this.authService.logIn(infos.email, infos.password)
-      .then (() => {
+      .then (() =>  {
         this.router.navigate(['/']);
       }
       )

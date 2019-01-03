@@ -16,10 +16,12 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 
 import { AuthGuardService } from './services/auth-guard.service';
+import { CreatePresentComponent } from './create-present/create-present.component';
 
 const appRoutes: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
+  { path: "createPresent", component: CreatePresentComponent },
   { path: "", component: HomeComponent, canActivate: [AuthGuardService] }
 ];
 
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    CreatePresentComponent
   ],
   imports: [
     BrowserModule,

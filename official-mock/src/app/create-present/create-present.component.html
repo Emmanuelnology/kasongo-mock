@@ -1,0 +1,71 @@
+<div class="all-create">
+  <h1>Add Your Lovely Present !</h1>
+  <form class="session-entry text-center p-3" #presentForm= "ngForm" (ngSubmit)="onSubmit(presentForm.value)">
+    <div class="mt-4 mb-3">
+      <div class="form-group">
+        <label for="Famname">Family Member Name:</label>
+        <input
+        [(ngModel)]="name"
+        type="text"
+        name="Famname"
+        id="name"
+        class="form-control" 
+        placeholder="Family Member Name"
+        #hisname="ngModel"
+        minlength="1"
+        required
+        autofocus>
+      </div>
+      <div class="form-group">
+        <label for="Luckyname">Lucky Gift Receiver:</label>
+        <input
+        [(ngModel)] ="luckyName"
+        type="text" 
+        class="form-control"      
+        id="luckyName" 
+        name="Luckyname"
+        #receiverName="ngModel"
+        minlength="1"
+        required>
+      </div>
+      <div class="form-group">
+          <label for="Gift">Gift Name:</label>
+          <input
+          [(ngModel)] ="giftName"
+          type="text" 
+          class="form-control"      
+          id="giftName" 
+          name="Gift"
+          #giftyName="ngModel"
+          minlength="2"
+          required>
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating:</label>
+        <input
+        [(ngModel)] ="rating"
+        type="number" 
+        class="form-control"      
+        id="rating" 
+        name="rating"
+        min="0"
+        max="10"
+        required>
+      </div>
+      <div class="form-group">
+        <label for="date">Session Date:</label>
+        <input
+        [(ngModel)] ="date"
+        type="date"      
+        id="date" 
+        name="date" 
+        class="form-control" 
+        placeholder="Session Date" 
+        required
+        autofocus>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-lg btn-success btn-block mb-4">Add Present</button>
+    <p>You do not have an account yet? <a routerLink="/register">Create an account</a></p>
+  </form>
+</div>
