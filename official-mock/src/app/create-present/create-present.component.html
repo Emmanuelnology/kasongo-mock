@@ -1,7 +1,7 @@
 <div class="all-create">
   <h1>Add Your Lovely Present !</h1>
   <form class="session-entry text-center p-3" #presentForm= "ngForm" (ngSubmit)="onSubmit(presentForm.value)">
-    <div class="mt-4 mb-3">
+    <div class="mt-4 mb-3" *ngFor="let present of presents | async" class ="present">
       <div class="form-group">
         <label for="Famname">Family Member Name:</label>
         <input
