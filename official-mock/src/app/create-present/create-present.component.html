@@ -1,7 +1,9 @@
 <div class="all-create">
   <h1>Add Your Lovely Present !</h1>
-  <form class="session-entry text-center p-3" #presentForm= "ngForm" (ngSubmit)="onSubmit(presentForm.value)">
-    <div class="mt-4 mb-3" *ngFor="let present of presents | async" class ="present">
+  <!-- <div *ngFor="let present of presents | async">                        
+  <div id="{{present.id}}"> -->
+  <form class="session-entry text-center p-3" #presentForm="ngForm" (ngSubmit)="onSubmit(presentForm.value)">
+    <div class="mt-4 mb-3">
       <div class="form-group">
         <label for="Famname">Family Member Name:</label>
         <input
@@ -65,7 +67,10 @@
         autofocus>
       </div>
     </div>
+    {{ presentForm.value | json }}
     <button type="submit" class="btn btn-lg btn-success btn-block mb-4">Add Present</button>
     <p>You do not have an account yet? <a routerLink="/register">Create an account</a></p>
   </form>
+  <!-- </div>
+  </div> -->
 </div>

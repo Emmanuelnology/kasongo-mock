@@ -2,19 +2,19 @@
     <h1>Welcome {{ authService.famuser?.email }} to your gift collection app</h1>
     <ul *ngFor= "let present of presents | async">
         <li>
-        <p> {{ present.giver }} </p>
+        <p> {{ present.name }} </p>
         </li>
         <li>
-            <p> {{ present.receiver }} </p>
+            <p> {{ present.luckyName }} </p>
         </li>
         <li>
             <p> {{ present.picture }} </p>
         </li>
         <li>
-            <p> {{ present.name }} </p>
+            <p> {{ present.giftName }} </p>
         </li>
         <li>
-            <p> {{ present.name }} </p>
+            <p> {{ present.rating }} </p>
         </li>
         <li>
             <p> {{ present.date }} </p>

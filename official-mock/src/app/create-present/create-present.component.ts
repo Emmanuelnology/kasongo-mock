@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IPresent, PresentServiceService, IPresentID } from '../services/present-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-present',
@@ -11,16 +12,16 @@ export class CreatePresentComponent implements OnInit {
   presents: Observable<IPresent[]>;
   disabledAdding: boolean;
 
-  constructor(private presentService: PresentServiceService) {
+  constructor(private presentService: PresentServiceService, private router: Router) {
     this.presents= this.presentService.presents;
    }
 
-   add(presentTitle: HTMLInputElement) {
-    if (presentTitle.value) {
-      this.presentService.addPresent(presentTitle.value);
-      };
-      this.disabledAdding = true;
-    }
+  //  add(presentTitle: HTMLInputElement) {
+  //   if (presentTitle.value) {
+  //     this.presentService.addPresent(presentTitle.value);
+  //     };
+  //     this.disabledAdding = true;
+  //   }
 
   delete(present: IPresentID) {
     this.presentService.deletePresent(present);

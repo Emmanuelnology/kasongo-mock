@@ -9,6 +9,7 @@ export interface IPresent {
   giftName: string;
   rating: number;
   date: string;
+  isSelected: boolean;
 }
 
 export interface IPresentID extends IPresent { id: string; }
@@ -41,6 +42,7 @@ export class PresentServiceService {
       giftName: gifts.Gift,
       rating: gifts.rating,
       date: gifts.date,
+      isSelected: gifts.isSelected
     };
     this.presentCollection.add(present)
     .catch(this.controlError);;
@@ -66,8 +68,14 @@ export class PresentServiceService {
 
   updatePresent (present: IPresentID) {
     this.presentCollection.doc(present.id).update({
+      isSelected: present.isSelected
     });
   }
+
+  // upload(presentTotal) {
+  //   return this.presentCollection.add(presentTotal);
+  // }
+
 
   controlError(error: Error) {
     console.log(error);
