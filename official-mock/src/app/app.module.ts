@@ -42,7 +42,7 @@ const appRoutes: Routes = [
     ),
     FormsModule
   ],
-  providers: [AuthGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
