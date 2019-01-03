@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   error: string;
   constructor(private router: Router, private authService: AuthService) { }
 
-  login(infos: {email: string, password: string}) {
+  signin(infos: {email: string, password: string}) {
     this.authService.logIn(infos.email, infos.password)
       .then (() => {
         this.router.navigate(['/']);
