@@ -1,6 +1,16 @@
 <div class="all-register">
+    <audio controls autoplay>
+      <source src="http://www.freexmasmp3.com/files/first-noel-r&b.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+   </audio>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h2 class="display-4">Do you want to discover your presents ?</h2>
+      <h3>Sign in to the gift land collection !</h3>
+      <img class="img-thumbnail" src="https://media.tenor.com/images/c4da07c73188cdd7d0fa79100493fd57/tenor.gif" alt="Chania">
+    </div>
+  </div>
   <h1><i aria-hidden="true"  class="fas fa-snowflake">Register</i></h1>
-  <img class="img-thumbnail" src="https://myhaliburtonhighlands.com/wp-content/uploads/2018/08/santa.jpg" alt="Chania">
   <form class="form-signin text-center p-5" #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
   <div class="mt-5 mb-4">
     <div class="form-row border rounded">
@@ -36,6 +46,8 @@
   </div>
   <button type="submit" class="btn btn-lg btn-success">Sign Up</button>
   <p>{{ registerForm.value| json }}</p>
-  <p>Do you already have an account on our website? <a routerLink="/login">Log in</a></p>
+  <div class="routing">
+    <p style="font-weight: bold">Do you already have an account on our website? <a routerLink="/login">Log in</a></p>
+  </div>
   </form>
 </div>

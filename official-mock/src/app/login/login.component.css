@@ -13,11 +13,33 @@ h1 {
     font-size: 3.5em;
 }
 
+.jumbotron {
+    background-color: rgb(146, 202, 146);
+}
+
+h2, h3 {
+    color: rgb(65, 13, 13);
+}
+
 .border {
     background-color: rgb(55, 114, 55);
 }
 
 label {
     color: rgb(63, 14, 14);
+    font-size: 1.3em;
     font-weight: bold; 
+}
+
+img {
+    height: 150px;
+    width: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.routing {
+    background-color: rgb(55, 114, 55);    
 }

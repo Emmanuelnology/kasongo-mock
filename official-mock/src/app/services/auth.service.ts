@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
   famuserCollection: AngularFirestoreCollection;
   constructor(private afs: AngularFirestore, public afAuth: AngularFireAuth, private route: Router) {
     this.famuserCollection = this.afs.collection('famuserInformation');

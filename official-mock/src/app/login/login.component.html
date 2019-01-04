@@ -1,4 +1,15 @@
 <div class="all-login">
+    <audio controls autoplay>
+        <source src="http://www.freexmasmp3.com/files/first-noel-r&b.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h2 class="display-4">Welcome to your marvellous gift collection land !</h2>
+        <h3>The place where dreams come true !</h3>
+        <img class="img-thumbnail" src="https://media.giphy.com/media/xTk9ZX3rmzz3lQNBxm/giphy.gif" alt="Chania">
+      </div>
+  </div>
   <h1><i aria-hidden="true" class="far fa-snowflake">Sign In</i></h1>
   <form class="form-signin text-center p-5" #loginForm="ngForm" (ngSubmit)="signin(loginForm.value)">
     <div class="mt-5 mb-4">
@@ -36,6 +47,8 @@
     </div>
     <button type="submit" class="btn btn-lg btn-success">Log In</button>
     <p>{{ loginForm.value| json }}</p>
-    <p>You do not have any account yet? <a routerLink="/register">Sign Up</a></p>
+    <div class="routing">
+      <p style="font-weight: bold">You do not have any account yet? <a routerLink="/register">Sign Up</a></p>
+    </div>
   </form>
 </div>

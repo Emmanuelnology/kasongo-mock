@@ -41,7 +41,7 @@ const appRoutes: Routes = [
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } 
+      { enableTracing: false } 
     ),
     FormsModule
   ],

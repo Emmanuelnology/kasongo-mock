@@ -1,7 +1,7 @@
-<div class="all-create">
+<!-- <div class="all-create">
   <h1>Add Your Lovely Present !</h1>
-  <!-- <div *ngFor="let present of presents | async">                        
-  <div id="{{present.id}}"> -->
+  <div *ngFor="let present of presents | async">                        
+  <div id="{{present.id}}">
   <form class="session-entry text-center p-3" #presentForm="ngForm" (ngSubmit)="onSubmit(presentForm.value)">
     <div class="mt-4 mb-3">
       <div class="form-group">
@@ -71,27 +71,102 @@
     <button type="submit" class="btn btn-lg btn-success btn-block mb-4">Add Present</button>
     <p>You do not have an account yet? <a routerLink="/register">Create an account</a></p>
   </form>
-  <!-- </div>
-  </div> -->
-</div>
-
-<!-- <h1>Get: {{ readingNow?.name }}</h1>
-<h1>Sync: {{ (syncedReadingNow | async).name }}</h1>
-<fieldset name="addBook">
-  <input [disabled]='addButtonDisabled' #bookTitle type="text">
-  <button [disabled]='addButtonDisabled' (click)="add(bookTitle)">Add</button>
-</fieldset>
-  
-<fieldset name="bookList">
-  <div *ngFor="let book of books | async" class ="book">
-    <label for="book-1">
-      <input id="book-1" type="checkbox" [(ngModel)]="book.isRead" (change)='update(book)'>
-      A book
-    </label>
-    <p>{{ book | json }}</p> 
-    <button (click) ="sync(book.id)"><i class="fas fa-sync"></i></button>
-    <button (click)="get(book.id)" ><i class="fas fa-download"></i></button>
-    <button (click)="delete(book)"><i class="fas fa-times"></i></button>
-    <p>JSON</p>
   </div>
-</fieldset> -->
+  </div>
+</div>  -->
+
+<div class="all-create">
+  <div>
+    <audio controls autoplay>
+      <source src="http://www.freexmasmp3.com/files/first-noel-r&b.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  <div class="hello">
+    <h1>Add Your Lovely Present !</h1>
+    <img class="img-thumbnail" src="https://cdn.dribbble.com/users/239755/screenshots/2424202/square-comp-santa-dribbble.gif" alt="Chania">
+  </div>
+  <fieldset name="addPresent" div class="border rounded">
+    <label for="Famname">Family Member Name:</label>
+          <input
+          [(ngModel)]="name"
+          type="text"
+          name="Famname"
+          id="name"
+          class="form-control" 
+          #hisname="ngModel"
+          minlength="1"
+          required
+          autofocus>
+          <label for="Luckyname">Lucky Gift Receiver:</label>
+          <input
+          [(ngModel)] ="luckyName"
+          type="text" 
+          class="form-control"      
+          id="luckyName" 
+          name="Luckyname"
+          #receiverName="ngModel"
+          minlength="1"
+          required>
+          <label for="Luckyimage">Gift Image:</label>
+          <input
+          [(ngModel)] ="luckyName"
+          type="text" 
+          class="form-control"      
+          id="luckyImage" 
+          name="Luckyimage"
+          #giftImage="ngModel"
+          minlength="1"
+          required>
+          <label for="Gift">Insert Gift Name:</label>
+            <input
+            [(ngModel)] ="giftName"
+            type="image" 
+            class="form-control"      
+            id="giftName" 
+            name="Gift"
+            #giftyName="ngModel"
+            minlength="2"
+            required>
+            <label for="rating">Rating:</label>
+          <input
+          [(ngModel)] ="rating"
+          type="number" 
+          class="form-control"      
+          id="rating" 
+          name="rating"
+          min="0"
+          max="10"
+          required>
+          <label for="date">Session Date:</label>
+          <input
+          [(ngModel)] ="date"
+          type="date"      
+          id="date" 
+          name="date" 
+          class="form-control" 
+          placeholder="Session Date" 
+          required
+          autofocus>
+    <button class="btn btn-lg btn-success btn-block mb-4" (click)="addPresent(presentTitle)">Add Present</button>
+    <button class="btn btn-lg btn-danger btn-block mb-4" (click)="deletePresent(presentTitle)">Delete Present</button>
+  </fieldset>
+    
+  <fieldset name="presentList">
+    <div *ngFor="let present of presents | async" class ="present">
+      <label for="present-1">
+        <input id="present-1" type="checkbox" [(ngModel)]="present.isSelected" (change)='update(present)'>
+        Present
+      </label>
+      <!-- <p>{{ present | json }}</p> 
+      <button (click) ="syncronise(present.id)"><i aria-hidden="true" class="fas fa-sync"></i></button>
+      <button (click)="get(present.id)" ><i aria-hidden="true" class="fas fa-download"></i></button>
+      <button (click)="deletePresent(present)"><i aria-hidden="true" class="fas fa-times"></i></button>
+      <p>JSON</p> -->
+    </div>
+    <div class="routing">
+      <p><a routerLink='/'>Return to gift list</a></p>
+      <p>You do not have an account yet? <a routerLink="/register">Create an account</a></p>
+    </div>
+  </fieldset>
+</div>

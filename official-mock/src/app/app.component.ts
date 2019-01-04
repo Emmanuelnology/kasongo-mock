@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore,  AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { IPresent } from './services/present-service.service';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,9 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'official-mock';
-  presents: Observable<any[]>;
-  constructor(afs: AngularFirestore) {
-    this.presents = afs.collection('presents').valueChanges();
-  }
+  // presents: Observable<IPresent[]>;
+  // presentCollection: AngularFirestoreCollection<IPresent>;
+  // constructor(afs: AngularFirestore) {
+  //   this.presents = afs.collection<IPresent>('presents').valueChanges();
+  // }
 }

@@ -1,8 +1,42 @@
 <div class="all-home">
+    <audio controls autoplay>
+        <source src="http://www.freexmasmp3.com/files/first-noel-r&b.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
     <h1>Welcome {{ authService.famuser?.email }} to your gift collection app</h1>
-    <ul *ngFor= "let present of presents | async">
+    <fieldset class="border rounded">
+        <p>Dwayne's gift</p>
+        <p>Lucky receiver: John Cena</p>
+        <p><img class="img-thumbnail" src="https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/gallery_slide/public/ferrari-488-gtb-rt-2016-web-0032.jpg?itok=96_ZHnuN" alt="ferrari"></p>
+        <p>Ferrai 360 HQ</p>
+        <p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </p>
+        <p>Date: 25/12/2018</p>
+        <button type="submit" class="btn btn-lg btn-success">Send Thanks</button>
+    </fieldset>
+    <fieldset class="border rounded">
+            <p>Cristiano's gift</p>
+            <p>Lucky receiver: Mo Salah</p>
+            <p><img class="img-thumbnail" src="https://s3.amazonaws.com/nikeinc/assets/76466/SP18_FB_BornMercOrange_Superfly6EliteFG_AH7365-810-A_hd_1600.jpg?1516310775" alt="nike" style="width: 180px"></p>
+            <p>Nike Airforce 360</p>
+            <p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        </p>
+        <p>Date: 27/12/2018</p>
+        <button type="submit" class="btn btn-lg btn-success">Send Thanks</button>
+    </fieldset>
+    <!-- <ul class= "text" *ngFor= "let present of presents | async">
         <li>
-        <p> {{ present.name }} </p>
+        <p>  Present: {{ present.name }} </p>
         </li>
         <li>
             <p> {{ present.luckyName }} </p>
@@ -24,7 +58,10 @@
             <input type="checkbox" autocomplete="off" (click)="Thanks()"> Send Thanking Letter
         </label>
         </div>
-    </ul>
+    </ul> -->
+    <div class="routing">
+        <p style="font-size:1em">Do you want to add another present? <a routerLink="/createPresent">Create Present</a></p>
+    </div>
     <div class="exit">
         <button (click)="logout()" class="btn btn-danger">Log Out</button>
     </div>
